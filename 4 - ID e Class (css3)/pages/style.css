@@ -1,0 +1,27 @@
+body{
+    background-color: #EEF1EF;
+    font-family: sans-serif;
+}
+#main{
+    background-color: #303633;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+p{
+    font-family: serif;
+}
+.aprendendo{
+    background-color: rgb(94, 0, 31);
+    color: white;
+    border-radius: 5px;
+}
+.basico{
+    color: rgba(118, 1, 50, 0.463);
+}
+.intermediario{
+    color: rgba(74, 0, 31, 0.514);
+}
+.avancado{
+    color: rgb(63, 0, 26);
+}

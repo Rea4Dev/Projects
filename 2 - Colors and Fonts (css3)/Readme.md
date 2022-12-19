@@ -1,0 +1,2 @@
+(referindo-se ao exercício 1, completando a linha de raciocíneo) Este, por exemplo, eu estou usando adequadamente um dos métodos de harmonia das cores e paletas. 
+Terei sempre a disposição de vários métodos, alguns mais simples e outros mais complexos, mas sempre disposto a várias maneiras de criar paletas harmônicas entre si.

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+        .box{
+            animation: pula 2s ease-in-out alternate infinite;
+            border-radius: 50%;
+            background-color: aquamarine;
+            height: 20vh;
+            width: 10vw;
+        }
+        @keyframes pula{
+            to{
+                transform: translateY(100px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p></p>
+    </div>
+</body>
+</html>

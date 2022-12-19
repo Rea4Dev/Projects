@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 46px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <p class="este">Nada aqui</p>
+    <script>
+        window.document.write(window.document.characterSet) /* Exemplo de aplicação do Dom */
+        window.document.write(window.navigator.appName)
+        window.document.write(window.document.URL)
+        /* Tudo dentro de uma árvore DOM é chamado de ELEMENTO */
+        window.document.querySelector('p.este').innerText = "Olá" /* serviria .innerHTML tbm */
+    </script>
+</body>
+</html>
+<!--   Selecionando
+    .getElementsByTagName()[0]
+    .getElementById()
+    .getElementsByClassName()
+    .getElementsByName[0]
+    
+    .querySelector()
+    .querySelector('div#msg')
+    .querySelector('div.msg')
+ -->
+ <!-- Da para combinar seletores com .innertext -->

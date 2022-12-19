@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n1=Number(window.prompt('Usando ponto, digite um número decimal com 4 casas'))
+        document.write(`Seu número formatado para uma casa decimal é ${n1.toFixed(1).replace('.' , ',')}`) /* Tofixed para escolher quantas casas decimais, e replace para trocar as coisas. */
+        document.write(`<br/> Em reais, fica ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`) /* Em BRL você coloca a moeda que quiser, USD, EUR e etc */
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        body{
+            background-image: url(images/esseee.png);
+            background-size: contain;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        @font-face {
+        font-family: 'Teste';
+        src: url('fonts/IMFeGPrm28P.ttf') format('truetype');
+        font-weight: bold;
+    }
+        p{
+            font-family: 'Teste';
+            margin: 3px;
+        }
+        body{
+            background-color: #030203;
+            color: #FFFFFF;
+        }
+        .box{
+            font-size: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -210px;
+            height: 200px;
+            width: 500px;
+        }
+        .noise::before{
+            position: fixed;
+            top:0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            content: "";
+            /* opacity: .038; */
+            opacity: .05;
+            z-index: 1000;
+            pointer-events: none;
+            background-image: url(medias/noise.gif);
+        }
+        .coming{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+    <p>"Welcome, good sir!</p>
+    <p> Care to play a game?"</p>
+    </div>  
+    <p class="coming">Still in work, coming soon...</p>
+    <div class="noise"></div>
+</body>
+</html>
+<!-- Talvez eu deva melhorar a animação de fundo da primeira página, mas tenho outras prioridades agora. -->

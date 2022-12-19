@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            animation: gradiente 100s ease alternate infinite;
+            background: linear-gradient(90deg, #476291, black, black, #350505f1) no-repeat;
+            background-size: 300% 300%;
+            color: #ffffff;
+            text-align: center;
+            height: 100vh;
+        }
+        @keyframes puff-in-hor {
+        0% {
+            -webkit-transform: scaleX(2);
+            transform: scaleX(2);
+            -webkit-filter: blur(4px);
+            filter: blur(4px);
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+            opacity: 1;
+            }
+        }           
+        .noise::before{
+            position: fixed;
+            top:0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            content: "";
+            opacity: .1;
+            z-index: 1000;
+            pointer-events: none;
+            background-image: url(stars7.gif);
+        }
+        .main_menu{
+            background-color: #161B22;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: fixed;
+            left: 38%; /* Está responsivo */
+            top: 10%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+            animation-delay: 0.6s;
+        }
+        .menus{
+            background-color: #0D1117;
+        }
+        @keyframes gradiente {
+            from{
+                background-position: 0 50%;
+            }
+
+            50%{
+                background-position: 100% 50% ;
+            }
+
+            to{
+                background-position: 0 50%;
+            }
+        }
+        main{
+            background-color: #161B22;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: fixed;
+            left: 22%; /* Está responsivo */
+            top: 30%;
+            transform: translate(-50%, -50%);
+            border-radius: 0px 20px 20px 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            -webkit-animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+            animation-delay: 3s;
+        }
+        footer{
+            background-color: #161B22;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: fixed;
+            left: 22%; /* Está responsivo */
+            top: 45%;
+            transform: translate(-50%, -50%);
+            border-radius: 0px 20px 20px 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            -webkit-animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+            animation-delay: 10s;
+        }
+        .final{
+            background-color: #161B22;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            position: fixed;
+            left: 45%; /* Está responsivo */
+            top: 65%;
+            transform: translate(-50%, -50%);
+            border-radius: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            -webkit-animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+            animation-delay: 10.5s;
+        }
+        a{
+            text-decoration: none;
+            color: #551A8B;
+        }
+        a::after{
+            color: #551A8B;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_menu">
+        <h1>Bem vindo, viajante!</h1>
+    </div>
+    <div class="noise"></div>
+    <main><p>Este é um site guia; para exercícios e projetos pessoais, focado em ser simples e intuitivo, sendo você da área ou não. <br>Sendo assim, agradeço sua presença, aperte os cintos e seja bem vindo, viajante!</p></main>
+    <footer><p>Com carinho, Rea.</p></footer>
+    <div class="final">
+        <p>GitHub: <a href="https://github.com/Rea4Dev">Rea4Dev</a> <br> Twitter: <a href="https://twitter.com/Rea4Dev">Rea4Dev</a> <br> <a href="ProjetosEX.html">Projetos e Exercícios</a> <br> <a href="">Sobre mim</a></p>
+    </div>
+</body>
+</html>

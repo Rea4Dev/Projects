@@ -1,0 +1,38 @@
+<!--        Auto-Atribuições
+    n=n+1   ->    n+=1   ->    n++ (chamado de incremento)
+    n=n-1   ->    n-=1   ->    n--(chamado de decremento)
+
+    n=n*4   ->    n*=4
+    n=n/2   ->    n/=2   
+    n=n**2  ->    n**=2  
+    n=n%5   ->    n%=5   
+ -->
+
+ <!--       Identidades
+    5 == 5     ->   True  (mesmo valor e mesmo tipo)
+    5 == '5'   ->   True  (mesmo valor e tipos diferentes)
+    5 === '5'  ->   False (mesmo valor e tipos diferentes)
+    5 === 5    ->   True  (mesmo valor e mesmo tipo)
+  -->
+
+<!--        Operadores Lógicos
+    !   não
+    &&   e
+    ||  ou
+ -->
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+ </head>
+ <body>
+   <script>
+      var n1=Number(window.prompt('Insira sua nota: '))
+      document.write(`${n1>=7?"Aprovado":"Reprovado"}`) /* Cria como se fosse um If else prático e rápido */
+      /* O que ele faz é o n1 receber algo condicionalmente. Poderíamos fazer ele ao invés de receber aprovado e reprovado, receber um valor; se imprimíssemos depois, veríamos que funciona. */
+   </script>
+ </body>
+ </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        main{
+            background-color: rgba(255, 255, 255, 0.048);
+            width: 580px;
+            height: 220px;
+            margin: auto;
+            border-radius: 50px;
+        }
+        input{
+            background-color: rgba(255, 255, 255, 0.097);
+            color: white;
+            border-radius: 10px;
+        }
+        h1{
+            padding-top: 50px;
+            margin-bottom: 15px;
+        }
+        .descrição{
+           margin-top: 0px; 
+           margin-bottom: 13px;
+           color: rgba(245, 245, 245, 0.734);
+        }
+        .resposta{
+            color: rgb(218, 62, 62);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Qual sua obrigação eletiva?</h1>
+        <p class="descrição">Insira sua idade e descubra</p>
+        <input type="number" name="txtn1" id="txtn1">
+        <input type="button" value="Submeter" onclick="avaliar()">
+        <p class="resposta"></p>
+        <script>
+            function avaliar() {
+                var idade=document.querySelector('input#txtn1')
+                var idadeT=Number(idade.value)
+                if (idadeT<16) {
+                    window.document.querySelector('p.resposta').innerHTML='Não pode votar.'
+                } else if (idadeT<18 || idadeT>67){
+                    window.document.querySelector('p.resposta').innerHTML='Voto opcional.'
+                } else{
+                    window.document.querySelector('p.resposta').innerHTML='Voto Obrigatório.'
+                }
+            }
+        </script>
+    </main>
+</body>
+</html>
+<!-- 
+    <16 Não vota
+    <18 ou >67 Voto opcional
+    <67 Voto obrigatório
+ -->

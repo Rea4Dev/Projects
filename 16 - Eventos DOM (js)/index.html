@@ -1,0 +1,53 @@
+<!-- https://developer.mozilla.org/en-US/docs/Web/Events para consultar e usar mais eventos -->
+<!-- Eventos são coisas que posso fazer com meu elemento -->
+<!-- Funções são um bloco de códigos que só irão ocorrer quando um evento relacionado a ele acontecer -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            font-size: 24px;
+            color: whitesmoke;
+            font-family: sans-serif;
+        }
+        .botão{
+            background-color: rgba(128, 128, 128, 0.651);
+            width: 200px;
+            height: 100px;
+            margin: auto;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <main class="botão" onclick="clicado()" onmouseenter="entrou()" onmouseout="saiu()">
+        <p>Clique Aqui</p>
+    </main>
+    <script>
+        /* 
+            var a = window.document.getElementById('botão')                 O método que está ativo é o que altera diretamente o HTML, mas também existe o método por Listeners, que é este em comentários.
+            a.addEventListener('click', clicar)
+            a.addEventListener('mouseenter', entrar)
+            a.addEventListener('mouseout', sair)
+        */
+        function clicado(){
+            window.document.querySelector('main.botão').innerText = 'Clicado!'
+            window.document.querySelector('main.botão').style.background= 'red'
+        }
+        function entrou(){
+            window.document.querySelector('main.botão').innerText = 'Isso! Agora clica.'
+            window.document.querySelector('main.botão').style.background='grey'
+        }
+        function saiu(){
+            document.querySelector('main.botão').innerText = 'Volta aqui rs'
+            document.querySelector('main.botão').style.background='green'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(147, 184, 200);
+            background-attachment: fixed;
+            font-family: sans-serif;
+        }
+        h1{
+            color: white;
+            font-size: 24px;
+        }
+        main{
+            border-radius: 20px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: 3px 3px rgb(107, 106, 106);
+            margin: auto;
+            height: 400px;
+            width: 500px;
+        }
+        footer{
+            padding-top: 10px;
+            font-style: italic;
+        }
+        main>p{
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="título">Hora do Dia</h1>
+    <main id="main">
+        <p id="mensagem"></p>
+        <img src="" alt="" id="foto">
+    </main>
+    <footer id="footer">&copy Rea4Dev</footer>
+    <script>
+        var hora = 7
+        if (hora<6) {
+            document.querySelector('p#mensagem').innerHTML='Boa madrugada!'
+            document.querySelector('img#foto').src='images/madrugada.png'
+            document.body.style.background='#161b1e'
+            document.body.querySelector('footer#footer').style.color='white'
+            document.body.querySelector('main#main').style.background='whitesmoke'
+        } else if (hora < 12){
+            document.querySelector('p#mensagem').innerHTML='Bom dia!'
+            document.querySelector('img#foto').src='images/manhã.png'
+            document.body.style.background='#edccaa'
+            document.body.querySelector('footer#footer').style.color='black'
+            document.body.querySelector('main#main').style.background='aliceblue'
+            document.body.querySelector('h1.título').style.color='black'
+        }
+    </script>
+</body>
+</html>

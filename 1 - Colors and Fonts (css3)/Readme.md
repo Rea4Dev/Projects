@@ -1,0 +1,2 @@
+Estou estudando psicologia das cores, harmonia das cores e ciclo cromático.
+Este exemplo de site um fiz usando a ferramenta Adobe Color, onde coloquei uma imagen (da Mime and Dash) e obtive a palheta de cores correspondente. Meu trabalho foi apenas selecionar a ordem e colocar.

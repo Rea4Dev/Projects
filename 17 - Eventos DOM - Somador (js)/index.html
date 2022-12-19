@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            font-size: 24px;
+            color: aliceblue;
+            font-family: sans-serif;
+        }
+        main{
+            text-align: center;
+            margin: auto;
+            height: 240px;
+            width: 550px;
+            background-color: rgba(255, 255, 255, 0.064);
+            border-radius: 10px;
+        }
+        input{
+            background-color: rgba(255, 255, 255, 0.381);
+            color: white;
+            font-size: 16px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Somador</h1>
+        <input type="number" name="txtn1" id="txtn1"> + 
+        <input type="number" name="txtn2" id="txtn2">
+        <input type="button" value="somar" onclick="clicado()">
+        <p>Resultado: </p> <p id="resultado"><strong></strong></p>
+    </main>
+    <script>
+        function clicado(){
+            var n1=window.document.querySelector('input#txtn1')
+            var n2=window.document.querySelector('input#txtn2')
+            /* Quando vem de um input, ele é visto apenas como string. Precisamos fazer o tratamento, como fizemos abaixo: */
+            var n1t = Number(n1.value)
+            var n2t = Number(n2.value)
+            /* Agora basta somar */
+            somador = n1t+n2t
+            window.document.querySelector('p#resultado').innerHTML=`${somador}`
+        }
+    </script>
+</body>
+</html>

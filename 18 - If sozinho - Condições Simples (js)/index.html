@@ -1,0 +1,51 @@
+<!-- Este é um ótimo exemplo da aplicação de um If sozinho. Ele é extremamente útil e não é dispensável, ele faz algo acontecer SOMENTE se aquilo for detectado, e caso não seja, tudo segue normal. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            font-size: 24px;
+            font-family: sans-serif;
+        }
+        main{
+            background-color: rgba(255, 255, 255, 0.049);
+            text-align: center;
+            margin: auto;
+            width: 550px;
+            height: 240px;
+            border-radius: 10px;
+        }
+        input{
+            background-color: rgba(255, 255, 255, 0.218);
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        h1{
+            padding-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1 id="título">Sistema de Multas</h1>
+        <input type="number" name="velocidade" id="txtn1">
+        <input type="button" value="Submeter" onclick="submetido()">
+    </main>
+    <script>
+        function submetido(){
+            var velocidade=window.document.querySelector('input#txtn1')
+            var tvelocidade=Number(velocidade.value)
+            if (tvelocidade>80){
+                window.alert('Você foi multado!')
+            }
+        }
+    </script>
+</body>
+</html>

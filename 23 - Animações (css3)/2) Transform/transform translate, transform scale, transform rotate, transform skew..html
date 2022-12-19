@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+        .box{
+            outline: 5px solid red;
+        }
+
+                                  /* Cuidado, pois um transform anula outro abaixo. */
+        
+        img{ /* Desloca a imagem no X e no Y. O margin que supostamente faria isso deformaria a linha vermelha, já este, não.*/
+            transform: translate(100px, 100px); /* Faz com o x e com o y na mesma linha de código */
+            /* transform: translateXouY(100px); */   /* Faz somente com o X ou Y */
+
+            /* Altera a escala da imagem (multiplicando) no X e no Y. */
+            transform: scale(2,2); /* Faz com x e com o y na mesma linha de código. */
+            /* transform: scaleXouY(2); */ /* Faz domente com X ou Y */
+
+            /* Rotaciona a imagem em graus */
+            transform: rotate(45deg); /* Também pode ser negativo, lembre do ciclo. E também pode usar a unidade turn (voltas). */
+
+            /* Estica a imagem em graus */ /* Também aceita negativos. */
+            transform: skewX(20deg); /* no eixo X */
+            transform: skewY(20deg); /* no eixo y */
+            transform: skew(20deg); /* Ambos os eixos */
+
+            /* 
+                Para usar todos eles e cada um deles, você usará somente UM transform e colocará as propriedades, tipo: 
+                transform: translateX(100px) scale(1.5) rotate(-15deg);            
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"><img src="images/madrugada.png" alt=""></div>
+</body>
+</html>

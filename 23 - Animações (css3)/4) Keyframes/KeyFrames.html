@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* lembre de citá-la */
+            animation: fly 1s;
+            background-color: purple;
+            width: 10vw;
+            height: 10vw;
+            position: relative; top: 200px;
+            border-radius: 50%;
+        }
+        /* Serve para especificar a animação. Especifica a timeline, especificando o que acontecerá com o elementos em momentos específicos. */
+        /* Por questões de performance, use sempre que possível, somente as propriedades opacity e transform nas suas animações. */
+        @keyframes fly{
+            0%{
+                transform: translate(0, 0);
+            }
+            50%{
+                transform: translate(50vw, 10vw); /* Usar vw é mais fácil. Por hora serve tentativa e erro. */
+            }
+            100%{
+                transform: translate(calc(100vw - 200px), 0); /* Fiz essa conta só aqui, no x, pois é o final. Para não atravessar. */
+            }
+
+
+            /* 0%{
+
+            }
+            50%{
+
+            }
+            70%{
+
+            }
+            100%{
+
+            } */
+
+
+
+            /* from{
+
+            }
+            67%{
+
+            }
+            to{
+
+            } */
+
+
+            /* to{
+                transform: translateX(calc(100vw - 200px));
+            } */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

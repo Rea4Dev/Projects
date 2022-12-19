@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+/*                                                    Animation name
+             
+             animation-name: fly; 
+
+
+                                                   Animation duration 
+             animation-duration: 1s;                                    Aceita também em milissegundo. 500ms = 0.5s  
+
+
+
+                                                      Shorthand
+             animation: fly 2s;                                         Une os dois acima.                             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                 Animation timing function
+
+
+
+             Define como uma animação progride ao longo da duração de cada ciclo. A função de tempo que será aplicada na animação
+
+
+
+
+                                                     1)  Ease in Ease out
+              Assim como no transition, serve para suavizar a animaçao. Mas é limitada a isso 
+
+             animation-timing-function: ease-in-out;                                          Tem só in e só out também  
+
+
+
+                                                   2)   Cubic bezier                                 
+             Aqui você define personalizadamente a suavização e comportamento da sua animação. Extremamente profissional e personalizado. 
+
+             animation-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);  
+
+
+
+                                                     3)    Steps     
+              Define o FPS da animação, mas mais que isso, define a quantidade de passos dentro de cada ação. Se eu definir como x, pense que a CADA animação ele dará X passos. 
+
+             animation-timing-function: steps(15);  
+
+
+
+                                                   4)    linear 
+              Deixa ela padrão, linear. Sem nenhuma suavidade e nada definido. 
+
+              animation-timing-function: linear; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                        Animation delay
+
+
+              É a quantidade de delay de depois da animação ser carregada e o seu início. Se eu definir 2s, a animação é carregada, leva 2 segundos e ela começa. 
+
+            animation-delay: 1s;  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    Animation iteration count
+
+
+             Define quantas vezes a animação ocorrerá até parar. Sem ela, é 1.
+            
+             animation-iteration-count: 2;                                    Aceita valor quebrado também, no caso, 2.5 iria 2 e metade da animação.
+             animation-iteration-count: infinite;                             Autoexplicativo; ela fica infinita.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    Animation direction
+
+
+                               1) Reverse
+               Faz a animação ocorrer ao contrário, em reverse. 
+             animation-direction: reverse; 
+
+ 
+                               2)alternate
+              Faz a animação ir, e voltar em reverse.
+             animation-iteration-count: infinite;
+             animation-direction: alternate; 
+
+
+                               3)alternate-reverse
+              Faz a animação começar em reverse, ir e voltar.
+             animation-iteration-count: infinite;
+             animation-direction: alternate-reverse; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    Animation fill mode
+
+
+              Define quais valores são aplicadas antes, antes e no final, antes ou no final. 
+
+                                                           
+                                                        1) fowards
+             animation-fill-mode: forwards;  Define que, ao acabar a animação, ela deve se manter no seu último estado. 
+  
+  
+                                                        2) backwards
+             animation-fill-mode: backwards; Define que, ao acabar a animação, ela deve se manter no seu primeiro estado. 
+
+
+                                                        3) both
+             animation-fill-mode: both; Assim como o fowards, mas em situações específicas, onde a animação sempre começaria de um lugar e pularia a outro e só depois no final se arruma, aqui age diferente. Em caso de necessidade de uso e confusão procure o vídeo https://www.youtube.com/watch?v=eTELLTacg-8&list=LL&index=3&ab_channel=dpw
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    Animation play state
+
+             Serve para definir o estado de execução da animação. Se on ou se off. 
+
+
+            animation-play-state:running ;
+
+            animation-play-state: paused; 
+
+
+                                                            APLICAÇÃO
+             Esta é uma aplicação dos conceitos acima, para ver vá até .box:hover e tire dos comentários junto com os dois códigos abaixo. 
+            animation-iteration-count: infinite;
+            animation-direction: alternate; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+                                                     A SHORTHAND LENDÁRIA 
+            Eis a ordem: animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteraction-count, animation-direction, animation-fill-mode, animation-play-state */
+            animation: fly 2s cubic-bezier(0.68, -0.6, 0.32, 1.6) 0s infinite alternate none running;
+
+
+
+
+            background-color: purple;
+            width: 10vw;
+            height: 10vw;
+            position: relative; top: 200px;
+            border-radius: 50%;
+        }
+
+         /* .box:hover{
+            animation-play-state: paused;
+        }  */
+
+        @keyframes fly{
+            0%{
+                transform: translate(0, 0);
+            }
+            50%{
+                transform: translate(50vw, 10vw); 
+            }
+            100%{
+                transform: translate(calc(100vw - 200px), 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

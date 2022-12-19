@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 30px;
+        }
+        .box{
+            background-color: rgb(92, 92, 246);
+            height: 300px;
+            width: 300px;
+
+            /* Permite escolher qual propriedade CSS vai passar pela transição. */
+            transition-property: background-color, border-radius; 
+
+            /* É a duração que isso ocorrerá */
+            transition-duration: 3s, 0.9s; /* cada duração corresponde a propriedade em ordem */
+
+            /* Serve para determinar qual o intervalo de tempo entre a ação (no caso, hover) e a transição terá entre os dois. Se 1s, hover acontecerá e só depois de 1 segundo os transitions acontereção. */
+            transition-delay: 0.5s;
+
+            /* Serve para dar uma suavizada nos transitions, o in no início, out no final e o in-out em ambos. */
+            transition-timing-function: ease-in-out;
+            /* transition-timing-function: cubic-bezier(.15, .89, .85, .26); */ /* Serve para fazer baseado em pontos na curva de animação, na função de tempo. */
+        }
+        .box:hover{
+            background-color: orange;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

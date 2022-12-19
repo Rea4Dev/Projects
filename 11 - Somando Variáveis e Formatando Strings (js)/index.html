@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n1=Number(window.prompt('Insira um valor a ser somado a outros dois: ')) /* Esta é a forma que já converte em Number diretamente. Funciona tanto com Int tanto com Float */
+        var n2=Number.parseInt(window.prompt('Insira outro número: ')) /* Esta forma converte em especificamente Int */
+        var n3=Number.parseFloat(window.prompt('Insira o último número: ')) /* Esta forma converte em especificamente Float */
+        var soma = n1+n2+n3
+        window.alert('Seu resultado da soma é 18') /* não faz interpolação */
+        window.alert('Seu resultado da soma é ' +soma) /* usa contatenaçãp */
+        window.alert(`Seu resultado é ${soma}`) /* usa template string */
+        /* Conversor de Número -> String */
+        /* String(n) */
+        /* n.toString() */
+    </script>
+</body>
+</html>
+<!-- (number + number) para adição -->
+<!-- (string + string) para contatenação -->
+
+<!-- 
+    s.length  Quantos caracteres a string tem
+    s.toUpperCase()  tudo para maiúsculas 
+    s.toLowerCase()  tudo para minúsculas
+ -->
