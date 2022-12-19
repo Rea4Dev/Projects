@@ -1,1 +1,0 @@
-Raccoon News por enquanto só possui HTML5 e CSS3.
