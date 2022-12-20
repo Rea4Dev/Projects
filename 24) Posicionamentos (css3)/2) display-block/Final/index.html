@@ -1,0 +1,72 @@
+<!-- Temos a imagem 1 e queremos chegar à imagem 2. -->
+
+<!-- A primeira coisa a se fazer é definir a largura e altura, mas sabemos que está em display:inline, e sabemos que display:inline não tem altura e largura alterável.
+Sendo assim, primeiro de tudo, vamos tirar de display:inline e transformar em display:block -->
+<!-- Dependendo do ítem, ele tem por padrão display:inline ou display:block, então dependendo do que você tem e seu objetivo, tem como fazer elipse dessa propriedade. -->
+<!-- Agora basta colocar largura e altura -->
+<!-- Agora basta começar a tratar do posicionamento -->
+
+<!-- Saiba que o display:block ocupa toda sua linha, então só terá ele. -->
+<!-- Queremos começar colocando o "item segundo" completamente a esqueda, então temos dois modos (veja em .example-item e .example-item_second) -->
+<!-- Apenas lembre que é OBRIGATÓRIO colocar largura, pq quando não colocamos largura num display:block, ele ocupa a tela toda -->
+<!-- Agora basta tratar o último elemento. -->
+
+<!-- Para centralizar este elemento de display:block, precisamos de uma largura (ja temos) e colocar margin auto na esquerda e na direita, ficando assim, no centro. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        body{
+            font-family: "Open Sans", sans-serif;
+            font-size: 25px;
+        }
+        ul, ol, li{
+            list-style: none;
+        }
+
+        .example{
+            color: #fff;
+            text-align: center;
+        }
+        .example-item{
+            display: block;
+            width: 33.333%;
+            height: 150px;
+        }
+        .example-item_first{
+            background-color: #FAA116;
+        }
+        .example-item_second{
+            background-color: #57c7c3;
+            /* Primeira maneira: Com margin-left: (100 - width)%; 
+               Consequências: Caso você altere em algum momento a width, o item sairá do lugar.*/
+
+               /* Segunda maneira: Com margin-left:auto; 
+               Não existe lado ruim para ele.*/
+               margin-left: auto;
+                /* Já que a linha toda é só do elemento (por ser display:block), o auto faz o cálculo sozinho e coloca toda a margem necessária na direita automático, mesmo que alteremos. */
+        }
+        .example-item_third{
+            background-color: #3b97d3;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <ul class="example">
+        <li class="example-item example-item_first">Primeiro</li>
+        <li class="example-item example-item_second">Segundo</li>
+        <li class="example-item example-item_third">Terceiro</li>
+    </ul>
+</body>
+</html>

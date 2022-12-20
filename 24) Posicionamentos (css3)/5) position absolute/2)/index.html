@@ -1,0 +1,72 @@
+<!-- Nosso objetivo é chegar até a imagem 1 -->
+
+<!-- Então vamos começar com o element first -->
+<!-- Concluímos que: 
+    - position:absolute torna possível usar top, left e etc (preferencialemnte use porcentagem). Mas deve ser corrigido usando translate (usando porcentagem também)
+    - para elementos ficarem relativos a seus pais, o pai deve ter um position:relative ou absolute
+    - quando devidamente aplicada essa propriedade, o site ficará sempre mantendo essas proporções idependente do tamanho da tela, e isso é uma vantagem. (no maximo seria interessante aplicar alguma tecnica para dependendo do tamanho da tela reduzir um pouco os ítens)
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        .elementExample{
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            color: white;
+            text-transform: uppercase;
+            text-align: center;
+            cursor: pointer;
+        }
+        .elementExample_first{
+            position: absolute;
+            background-color: #6c5ce7;
+            right: 0;
+        }
+        .elementExample_second{
+            background-color: #00b894;
+            position: absolute; /* left e top só funcionará assim */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* sem essa, ele n ficaria centralizado de fato, pois a centralização a princípio é só em uma das pontas. Este translate corrige isso, e além disso, desta forma e usando porcentagem, ele faz isso já automaticamente adaptando a mudanças de largura e altura. Qualquer dúvida veja o vídeo dnv https://www.youtube.com/watch?v=f8H-wstL0nU&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x&index=7 */
+        }
+        .elementExample_last{
+            background-color: #d63031;
+            position: relative;
+        }
+        .elementExample-internal{
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background-color: #00cec9;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="elementExample elementExample_first">
+        Apenas uma div
+    </div>
+
+    <div class="elementExample elementExample_second">
+        Apenas outra div
+    </div>
+
+    <div class="elementExample elementExample_last">
+        <div class="elementExample-internal">Interna</div>
+    </div>
+</body>
+</html>

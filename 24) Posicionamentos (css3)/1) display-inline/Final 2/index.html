@@ -1,0 +1,77 @@
+<!-- Nosso site deste jeito está como na imagem 00. -->
+<!-- O objetivo é alinhar os elementos horizontalmente igual na imagem 01. -->
+
+<!-- Se usarmos a propriedade display: inline; conseguiremos deixar horizontalmente alinhado, mas esta propriedade NÃO permite personalizar altura e largura (width height), então não conseguiríamos com ela. Fica como a imagem 02. -->
+
+<!-- Ainda assim, vamos o mais próximo do objetivo que der com esta propriedade. -->
+<!-- Ao usarmos o display:inline; temos um espaço entre os elementos alinhados horizontalmente, e nosso objetivo não tem.
+     O porquê desse espaço é devido ao fato de que o display:inline; transforma a propriedade para ser tratada como uma palavra (e palavras (p, h1, h2, h3...) tem espaço entre si devido ao enter, que é interpretado pelo navegador NÃO como uma quebra de linha, mas um espaço.). Imagem3 -->
+
+<!-- Se este fosse o caso, bastaria tirar os enters, mas não é. Para solucionar isso, podemos tanto tirar os enters dos li (o que deixa tudo muito feio) ou então colocar um comentário no final de uma e antes do começo da outra (fazendo todo o espaço virar um comentário.). Faremos a segunda (que é a melhor). -->
+<!-- Agora só falta alinhar no centro -->
+
+<!-- Podemos usar o text-aling:center;-->
+<!-- Atenção! O text-aling move apenas o TEXTO (caso coloque um background color, verá.)
+ou seja, como no caso o display:inline deixa com comportamento de texto, devemos usar o text-aling:center dentro da diretiva pai (no caso, o "example"). -->
+<!-- Desça até o example para ver mais informações importantes. -->
+
+<!-- Chegamos ao fim, o mais próximo que podemos chegar é isso (basta tirar o width que ele centraliza). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Inline</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="display.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        body{
+            font-family: "Open Sans", sans-serif;
+            font-size: 25px;
+        }
+        ul, ol, li{
+            list-style: none;
+        }
+        .example{
+            color: #fff;
+            width: 50vw;
+            text-align: center;
+            background-color: antiquewhite;
+            /* Aqui podemos ver que o text-align:center; realmente só centraliza o texto, pois o texto está completamente centralizado, mas apenas dentro daquilo que o contém (representado pela cor bege).
+            Vemos também que aquilo que o contém não está centralizado justamente porque text-align:center; só centraliza o texto. */
+            /* O display:inline; transforma o comportamento como texto, então unimos ele ao text align para fazer algumas coisas, já que os elementos transformados pelo display serão centralizados pelo textalign (já que agora são "textos").
+            Fique SEMPRE atento com a questão de pai e onde colocar o text-align. */
+            /* Concluímos que o display:inline transforma como texto, que podemos usar (no lugar certo) o text align para centralizar, colocar na direita, esquerda (mas sempre ciente que é APENAS o texto, basta colocar cor no fundo e ver). */
+        }
+        .example-item{
+            /* width: 33.333%;
+            height: 150px;      Não funciona    */
+            display: inline;
+        }
+        .example-item_first{
+            background-color: #faa116;
+        }
+        .example-item_second{
+            background-color: #57c7c3;
+        }
+        .example-item_third{
+            background-color: #3b97d3;
+        }
+    </style>
+</head>
+<body>
+    <ul class="example">
+        <li class="example-item example-item_first">Primeiro</li><!--  
+        --><li class="example-item example-item_second">Segundo</li><!--  
+        --><li class="example-item example-item_third">Terceiro</li>
+    </ul>
+</body>
+</html>
+<!-- Vemos no "li" uma novidade. Classes modificaoras.
+É como se fosse um id para cada class (havia entendido assim pelo menos) -->

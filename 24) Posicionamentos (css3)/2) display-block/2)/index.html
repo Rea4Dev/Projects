@@ -1,0 +1,56 @@
+<!-- Temos a imagem 1 e queremos chegar à imagem 2. -->
+
+<!-- A primeira coisa a se fazer é definir a largura e altura, mas sabemos que está em display:inline, e sabemos que display:inline não tem altura e largura alterável.
+Sendo assim, primeiro de tudo, vamos tirar de display:inline e transformar em display:block -->
+<!-- Dependendo do ítem, ele tem por padrão display:inline ou display:block, então dependendo do que você tem e seu objetivo, tem como fazer elipse dessa propriedade. -->
+<!-- Agora basta colocar largura e altura -->
+<!-- Agora basta começar a tratar do posicionamento -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Block 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        body{
+            font-family: "Open Sans", sans-serif;
+            font-size: 25px;
+        }
+        ul, ol, li{
+            list-style: none;
+        }
+
+        .example{
+            color: #fff;
+            text-align: center;
+        }
+        .example-item{
+            display: block;
+            width: 33.333%;
+            height: 150px;
+        }
+        .example-item_first{
+            background-color: #FAA116;
+        }
+        .example-item_second{
+            background-color: #57c7c3;
+        }
+        .example-item_third{
+            background-color: #3b97d3;
+        }
+    </style>
+</head>
+<body>
+    <ul class="example">
+        <li class="example-item example-item_first">Primeiro</li>
+        <li class="example-item example-item_second">Segundo</li>
+        <li class="example-item example-item_third">Terceiro</li>
+    </ul>
+</body>
+</html>

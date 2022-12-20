@@ -1,0 +1,50 @@
+<!-- Nosso site deste jeito está como na imagem 00. -->
+<!-- O objetivo é alinhar os elementos horizontalmente igual na imagem 01. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Inline</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 25px;
+        }
+        ul, ol, li{
+            list-style: none;
+        }
+        .example{
+            color: #fff;
+        }
+        .example-item{
+            width: 33.333%;
+            height: 150px;
+        }
+        .example-item_first{
+            background-color: #faa116;
+        }
+        .example-item_second{
+            background-color: #57c7c3;
+        }
+        .example-item_third{
+            background-color: #3b97d3;
+        }
+    </style>
+</head>
+<body>
+    <ul class="example">
+        <li class="example-item example-item_first">Primeiro</li>
+        <li class="example-item example-item_second">Segundo</li>
+        <li class="example-item example-item_third">Terceiro</li>
+    </ul>
+</body>
+</html>
+<!-- Vemos no "li" uma novidade. Classes modificaoras.
+É como se fosse um id para cada class (havia entendido assim pelo menos) -->
