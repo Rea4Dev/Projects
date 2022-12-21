@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../favicon-32x32.png" type="image/x-icon">
+    <title>Cores e fontes</title>
+    <style>
+        body{
+            /* background-color: black; */
+            background-image: url('../ala.png');
+            background-size: cover;
+            --color-text-inside:rgba(255, 255, 255, 0.911); 
+            --color-text-outside:#C9D1D9;
+            --color-background-opacitive_menu:#161b225d;
+        }
+        .black-hole {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            box-shadow: 0 0 113px rgb(255, 115, 0);
+            animation: spin 1s linear infinite;
+            background-color: black;
+            
+            position: absolute;
+            top:50%;
+    }  
+         @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+    }
+    header{
+        background-color: var(--color-background-opacitive_menu);
+        margin: auto;
+        position: relative;
+        border-radius: 20px;
+        color: var(--color-text-inside);
+        width: 16%;
+        height: 6vh;
+        text-align: center;
+    }
+    main{
+        background-color: var(--color-background-opacitive_menu);
+        margin: auto;
+        position: relative;
+        border-radius: 20px;
+        color: var(--color-text-inside);
+        width: 70%;
+        height: 30%;
+        text-align: center;
+    }
+    h1, h2, hr, p{
+        color: var(--color-text-inside);
+    }
+    a{
+        text-decoration: none;
+        color: #a241fd;
+        font-size: 21px;
+    }
+    </style>
+</head>
+<body>
+    <div class="black-hole"></div>
+
+    <header>
+        <h1>Cores e fontes</h1>
+    </header>
+    <main>
+        <h2>Do que se trata</h2>
+        <hr>
+        <p>Apenas um exercício onde eu treinei harmonia de cores, paletas de cores e algumas tags css. <br> Fiz usando a ferramenta Adobe Color, onde coloquei uma imagen (da Mime and Dash) e obtive a palheta de cores correspondente. Meu trabalho foi apenas selecionar a ordem e colocar.</p>
+        <a href="index.html">Ir ao exercício</a>
+    </main>
+</body>
+</html>

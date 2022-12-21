@@ -4,15 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="../favicon-32x32.png" type="image/x-icon">
+    <title>Projetos e Exercícios</title>
     <style>
+        *{
+            --color-text-inside:#fff; 
+            --color-text-outside:#C9D1D9;
+            --color-background-opacitive_menu:#161B22;
+        }
         body{
-            animation: gradiente 100s ease alternate infinite;
-            background: linear-gradient(90deg, #476291, black, black, #350505f1) no-repeat;
+            margin: 0;
+            padding: 0;
+            border: 0;
+
+            /* (1/2) Animação Viagem*/
+            animation: gradiente 150s ease alternate infinite;
+            background-color: black;
+            background-attachment: fixed; /* É para ficar parado */
             background-size: 300% 300%;
             color: #ffffff;
-            text-align: center;
             height: 100vh;
+        }
+            /* (2/2) Animação Viagem*/
+            @keyframes gradiente {
+            from{
+                background-position: 0 50%;
+            }
+
+            50%{
+                background-position: 100% 50% ;
+            }
+
+            to{
+                background-position: 0 50%;
+            }
+        }
+
+        /* (1/2) Animação Estrelas*/
+        .noise::before{
+            position: fixed;
+            top:0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            content: "";
+            opacity: .1;
+            z-index: 1000;
+            pointer-events: none;
+            background-image: url(stars7.gif);
         }
         @keyframes puff-in-hor {
         0% {
@@ -29,149 +68,94 @@
             filter: blur(0px);
             opacity: 1;
             }
-        }           
-        .noise::before{
-            position: fixed;
-            top:0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            content: "";
-            opacity: .1;
-            z-index: 1000;
-            pointer-events: none;
-            background-image: url(stars7.gif);
         }
-        .main_menu{
-            background-color: #161B22;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            position: fixed;
-            left: 45%; /* Está responsivo */
-            top: 1%;
-            transform: translate(-50%, -50%);
-            border-radius: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-	        animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-           /*  animation-delay: 0.6s; */
+        /* .section{
+            text-align: justify;
+        } */
+        /* .section::after{
+            content:'';
+            display: inline-block;
+            width: 100vw; 
+        } */
+        .proj{
+            /* display: inline-block;  */
+            background-color: var(--color-background-opacitive_menu);
+            width: 40%;
+            text-align: center;
+            opacity: 0.89;
+            margin: 30px;
         }
-        .menus{
-            background-color: #0D1117;
-        }
-        @keyframes gradiente {
-            from{
-                background-position: 0 50%;
-            }
-
-            50%{
-                background-position: 100% 50% ;
-            }
-
-            to{
-                background-position: 0 50%;
-            }
-        }
-        main{
-            background-color: #161B22;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            position: fixed;
-            left: 1%; /* Está responsivo */
-            top: 13%;
-            transform: translate(-50%, -50%);
+        .proj1{
             border-radius: 0px 20px 20px 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            -webkit-animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-	        animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-          /*   animation-delay: 3s; */
-        }
-        .main2{
-            background-color: #161B22;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             position: fixed;
-            left: 50%; /* Está responsivo */
-            top: 13%;
-            transform: translate(-50%, -50%);
-            border-radius: 0px 0px 20px 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            -webkit-animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-	        animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-          /*   animation-delay: 3s; */
+            top:0%;
         }
-        footer{
-            background-color: #161B22;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            position: fixed;
-            left: 22%; /* Está responsivo */
-            top: 45%;
-            transform: translate(-50%, -50%);
-            border-radius: 0px 20px 20px 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            -webkit-animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-	        animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-            /* animation-delay: 10s; */
+        .proj2{
+            border-radius: 20px 0px 20px 20px;
+            margin-left: auto;
         }
-        .final{
-            background-color: #161B22;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            position: fixed;
-            left: 45%; /* Está responsivo */
-            top: 65%;
-            transform: translate(-50%, -50%);
-            border-radius: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            -webkit-animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-	        animation: puff-in-hor 1s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
-            /* animation-delay: 10.5s; */
+        .destaque{
+            color: rgb(255, 233, 246);
+        }
+        h1{
+            color: rgb(255, 233, 246);
         }
         a{
             text-decoration: none;
-            color: #551A8B;
+            color: var(--color-text-inside);
         }
-        a::after{
-            color: #551A8B;
+        a:hover{
+            color: rgb(253, 137, 137);
         }
     </style>
 </head>
 <body>
+    <!-- (2/2) Animação Estrelas -->
     <div class="noise"></div>
-    <div class="main_menu">
-        <h1> <a href="Bem Vindo! visited.html">🔙 Voltar</a> </h1>
+
+    <div class="section">
+    <section class="proj proj1">
+        <h1>Projetos</h1>
+        <p class="destaque">Caso sua intenção aqui seja profissional comigo, é onde recomendo que leve mais em consideração.</p>
+        <hr>
+        <h2>Contextualização</h2>
+        <p>O verdadeiro campo de batalha; onde coloco tudo que sei, onde busco novos conhecimentos para o que preciso e onde aprendo com meus erros na prática. <br> <br> Tudo que estudo e pratico (em exercícios), busco aplicar em projetos atuais ou futuros. <br> <br> Meus projetos estão em <b>constante</b> evolução e atualização, e muito provavelmente estarei com mais de um em andamento.</p>
+        <hr>
+        <a href="../3 - Mime and Dash Project\Initial page.html" target="_blank" rel="external">1) Mime and Dash <br> <img class="mime" src="Bonbon&Chuchu.png tratado.png" alt=""> </a>
+    </section>
+    <section class="proj proj2">
+        <h1>Exercícios</h1>
+        <p class="destaque">Recomendo apenas a título de curiosidade, pois devido a <b>não atualização de exercícios </b>(pois não tem porquê), torna-se um péssimo método qualificativo de minhas habilidades.</p>
+        <hr>
+        <h2>Contextualização</h2>
+        <p>Apenas onde pratico um ou outro novo conhecimento, ou então onde pequenos códigos como exemplo referencial de uma propriedade, juntamente aos comentários que inseri. <br><br> Por se tratar de exercícios e anotações, só os faço uma vez; quando os crio. Logo, não serve como método qualificativo.</p>
+        <hr>
+        <a href="../1 - Colors and Fonts (css3)\Explicação.html" target="_blank" rel="external">1) Cores e fontes - Mime and Dash<br></a>
+        <a href="../2 - Colors and Fonts (css3)/Explicação.html" target="_blank" rel="external">2) Cores e fontes - Alternativo <br></a>
+        <a href="../" target="_blank" rel="external">3)<br></a>
+        <a href="../" target="_blank" rel="external">4)<br></a>
+        <a href="../" target="_blank" rel="external">5)<br></a>
+        <a href="../" target="_blank" rel="external">6)<br></a>
+        <a href="../" target="_blank" rel="external">7)<br></a>
+        <a href="../" target="_blank" rel="external">8)<br></a>
+        <a href="../" target="_blank" rel="external">9)<br></a>
+        <a href="../" target="_blank" rel="external">10)<br></a>
+        <a href="../" target="_blank" rel="external">11)<br></a>
+        <a href="../" target="_blank" rel="external">12)<br></a>
+        <a href="../" target="_blank" rel="external">13)<br></a>
+        <a href="../" target="_blank" rel="external">14)<br></a>
+        <a href="../" target="_blank" rel="external">15)<br></a>
+        <a href="../" target="_blank" rel="external">16)<br></a>
+        <a href="../" target="_blank" rel="external">17)<br></a>
+        <a href="../" target="_blank" rel="external">18)<br></a>
+        <a href="../" target="_blank" rel="external">19)<br></a>
+        <a href="../" target="_blank" rel="external">20)<br></a>
+        <a href="../" target="_blank" rel="external">21)<br></a>
+        <a href="../" target="_blank" rel="external">22)<br></a>
+        <a href="../" target="_blank" rel="external">23)<br></a>
+        <a href="../" target="_blank" rel="external">24)<br></a>
+    </section>
     </div>
-    <main>
-        <h2>Exercícios</h2>
-        <p>São apenas exercícios, não são complexos e cada um deles geralmente é testando apenas uma função. <br> Não os use como um critério avaliador, ao invés disso, veja os projetos. </p>
-        <p><a href="../1 - Colors and Fonts (css3)\trata-se.html">Cores e fontes</a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-        <p><a href=""></a></p>
-    </main>
-    <main class="main2">
-        <h2>Projetos</h2>
-        <p>O verdadeiro campo de batalha, onde colocamos tudo ao nosso alcance para atingir o esperado e demandado. <br> Em constante melhoria e atualização, sempre implementando novos conhecimentos e truqes.  </p>
-        <p><a href="../3 - Mime and Dash Project\Initial page.html">Mime and Dash</a></p>
-    </main>
+    
+</body>
 </html>
