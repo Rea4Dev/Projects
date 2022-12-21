@@ -40,10 +40,11 @@
         function clicado(){
             var n1=window.document.querySelector('input#txtn1')
             var n2=window.document.querySelector('input#txtn2')
-            /* Quando vem de um input, ele é visto apenas como string. Precisamos fazer o tratamento, como fizemos abaixo: */
+/* Quando vem de um input, ele é visto apenas como string. 
+Precisamos fazer o tratamento, como fizemos abaixo: */
             var n1t = Number(n1.value)
             var n2t = Number(n2.value)
-            /* Agora basta somar */
+/* Agora basta somar */
             somador = n1t+n2t
             window.document.querySelector('p#resultado').innerHTML=`${somador}`
         }
