@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .caixavo{
+            background-color: aquamarine;
+            width:400px;
+            height:400px;
+            margin: auto;
+        }
+        .caixapai{
+            background-color: yellow;
+            width:200px;
+            height:200px;
+            position: relative;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+        .caixafilho{
+            background-color: red;
+            width:100px;
+            height:100px;
+            position: relative;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+        .caixafilho > p{
+            position: relative;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="caixavo">
+        <div class="caixapai">
+            <div class="caixafilho">
+                <p>Texto</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- position relative e position absolute são basicamente a mesma coisa, a diferença é que o relative é relativo ao pai e o absolute é relativo ao parente mais velho mais próximo que não seja static. -->
+<!-- por enquanto só sei alinhar textos igual no .caixafilho > p -->
+<!-- faça a lógica te guiar -->
