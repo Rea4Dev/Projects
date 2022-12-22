@@ -8,10 +8,15 @@
     <title>Bem-vindo!</title>
     <style>
         body{
+            /* Definições página */
             border: 0;
             padding: 0;
             margin: 0;
+            margin-left: 20%;
+            margin-right: 20%;
+            overflow: hidden;
 
+            /* Cores */
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             --color-text-inside:#fff; 
             --color-text-outside:#C9D1D9;
@@ -53,6 +58,65 @@
             pointer-events: none;
             background-image: url(Initial/stars7.gif);
         }
+        header{ /* Saudações */
+            background-color: var(--color-background-opacitive_menu);
+            width: 46%;
+            height: 10%;
+            border-radius: 50px;
+            font-size: 90%;
+            margin: auto;
+            margin-bottom: 20%;
+        }
+        header>h1{ /* Saudações */
+            position: relative;
+            top:50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+        .msg1{ 
+            background-color: var(--color-background-opacitive_menu);
+            width: 100%;
+            border-radius: 0px 20px 20px 20px;
+            font-size: 80%;
+            height: 8%;
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+        .msg1>p{
+            text-align: center;
+            position: relative;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        .msg2{
+            background-color: var(--color-background-opacitive_menu);
+            width: 15%;
+            height: 8%;
+            border-radius: 0px 20px 20px 20px;
+            font-size: 90%;
+            padding-left: 1%;
+            padding-right: 1%;
+            margin-bottom: 10%;
+        }
+        .msg2>p{
+            text-align: center;
+            position: relative;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        footer{
+            margin: auto;
+            width: 25%;
+            height: 20%;
+            background-color: var(--color-background-opacitive_menu);
+            border-radius: 20px 0px 20px 20px;
+        }
+        footer>p{
+            text-align: center;
+            position: relative;
+            top:50%;
+            transform: translateY(-50%);  
+        }
     </style>
 </head>
 <body>
@@ -60,19 +124,19 @@
     <div class="noise"></div>
 
     <header>
-
+        <h1>Saudações, viajante!</h1>
     </header>
 
     <div class="msg1">
-
+        <p>Este é um site guia para exercícios e projetos pessoais, focado em ser simples e intuitivo, sendo você da área ou não. Sendo assim, agradeço sua presença, aperte os cintos e seja bem vindo, viajante!</p>
     </div>
 
     <div class="msg2">
-
+        <p>Com carinho, Rea.</p>
     </div>
 
     <footer>
-        
+        <p>GitHub: <a href="https://github.com/Rea4Dev" target="_blank" rel="external">Rea4Dev</a> <br> Twitter: <a href="https://twitter.com/Rea4Dev" target="_blank" rel="external">Rea4Dev</a> <br> <a href="Initial/ProjetosEX.html" target="_blank" rel="external">Projetos e Exercícios</a> <br> <a href="" target="_blank" rel="external">Sobre mim (em breve)</a></p>
     </footer>
 </body>
 </html>
