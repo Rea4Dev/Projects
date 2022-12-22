@@ -76,6 +76,12 @@
         <p>Este será um programa que exibirá uma imagem e todo um estilo relativo a hora do dia do seu computador ou a que você inserir. <br><br> Ainda não esta pronto, então aguarde!</p>
     </main>
     <script>
+        var largura = window.screen.width;
+        if (largura < 900){
+            window.document.body.style.backgroundColor="black";
+            window.alert('Por enquanto não projetei esta página para celulares. Entre por um PC ou aguarde eu adaptá-la.');
+            window.location.replace('https://rea4dev.github.io/Projects/Initial/ProjetosEX.html');
+        }
     </script>
 </body>
 </html>
