@@ -31,6 +31,23 @@
             height: 100vh;
         }
 
+        @keyframes puff-in-hor {
+        0% {
+            -webkit-transform: scaleX(2);
+            transform: scaleX(2);
+            -webkit-filter: blur(4px);
+            filter: blur(4px);
+            opacity: 0;
+        }
+        100% {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+            -webkit-filter: blur(0px);
+            filter: blur(0px);
+            opacity: 1;
+            }
+        }
+
         /* (2/2) Animação Viagem*/
         @keyframes gradiente {
             from{
@@ -58,65 +75,275 @@
             pointer-events: none;
             background-image: url(Initial/stars7.gif);
         }
-        header{ /* Saudações */
-            background-color: var(--color-background-opacitive_menu);
-            width: 46%;
-            height: 10%;
-            border-radius: 50px;
-            font-size: 90%;
-            margin: auto;
-            margin-bottom: 20%;
-        }
-        header>h1{ /* Saudações */
-            position: relative;
-            top:50%;
-            transform: translateY(-50%);
-            text-align: center;
-        }
-        .msg1{ 
-            background-color: var(--color-background-opacitive_menu);
-            width: 100%;
-            border-radius: 0px 20px 20px 20px;
-            font-size: 80%;
-            height: 8%;
-            padding-left: 1%;
-            padding-right: 1%;
-        }
-        .msg1>p{
-            text-align: center;
-            position: relative;
-            top:50%;
-            transform: translateY(-50%);
-        }
-        .msg2{
-            background-color: var(--color-background-opacitive_menu);
-            width: 15%;
-            height: 8%;
-            border-radius: 0px 20px 20px 20px;
-            font-size: 90%;
-            padding-left: 1%;
-            padding-right: 1%;
-            margin-bottom: 10%;
-        }
-        .msg2>p{
-            text-align: center;
-            position: relative;
-            top:50%;
-            transform: translateY(-50%);
-        }
-        footer{
-            margin: auto;
-            width: 25%;
-            height: 20%;
-            background-color: var(--color-background-opacitive_menu);
-            border-radius: 20px 0px 20px 20px;
-        }
-        footer>p{
-            text-align: center;
-            position: relative;
-            top:50%;
-            transform: translateY(-50%);  
-        }
+        @media (max-width: 600px) { /* Geralmente cells */
+            header{ /* Saudações */
+                background-color: var(--color-background-opacitive_menu);
+                width: 120%;
+                height: 10%;
+                border-radius: 0px 50px 50px 50px;
+                font-size: 70%;
+                margin: auto;
+                margin-bottom: 60%;
+
+                /* Animação texto*/
+                -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation-delay: 0.6s;
+            }
+            header>h1{ /* Saudações */
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+                text-align: center;
+            }
+            .msg1{ 
+                background-color: var(--color-background-opacitive_menu);
+                width: 100%;
+                border-radius: 0px 20px 20px 20px;
+                font-size: 70%;
+                height: 18%;
+                padding-left: 1%;
+                padding-right: 1%;
+
+                /* Animação texto */
+                -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation-delay: 3s;
+            }
+            .msg1>p{
+                text-align: center;
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            .msg2{
+                background-color: var(--color-background-opacitive_menu);
+                width: 75%;
+                height: 8%;
+                border-radius: 0px 20px 20px 20px;
+                font-size: 90%;
+                padding-left: 1%;
+                padding-right: 1%;
+                margin-bottom: 40%;
+
+                /* Animação texto */
+                /* Animação texto */
+                -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation-delay: 10.0s;
+            }
+            .msg2>p{
+                text-align: center;
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            footer{
+                margin: auto;
+                width: 67%;
+                height: 17%;
+                background-color: var(--color-background-opacitive_menu);
+                border-radius: 20px 0px 20px 20px;
+
+                /* Animação texto */
+                -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation-delay: 10.5s;
+                font-size: 70%;
+            }
+            footer>p{
+                text-align: center;
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);  
+            }
+            a{
+                text-decoration: none;
+                color: #a241fd;
+            }
+            a:hover{
+                color: red;
+            }
+    }
+        @media (min-width: 600px) and (max-width: 900px) { /* Geralmente tablets */
+            header{ /* Saudações */
+                background-color: var(--color-background-opacitive_menu);
+                width: 55%;
+                height: 10%;
+                border-radius: 0px 50px 50px 50px;
+                font-size: 80%;
+                margin: auto;
+                margin-bottom: 20%;
+                padding-bottom: 10px;
+
+                /* Animação texto*/
+                -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation-delay: 0.6s;
+            }
+            header>h1{ /* Saudações */
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+                text-align: center;
+            }
+            .msg1{ 
+                background-color: var(--color-background-opacitive_menu);
+                width: 100%;
+                border-radius: 0px 20px 20px 20px;
+                font-size: 70%;
+                height: 8%;
+                padding-left: 1%;
+                padding-right: 1%;
+
+                /* Animação texto */
+                -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation-delay: 3s;
+            }
+            .msg1>p{
+                text-align: center;
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            .msg2{
+                background-color: var(--color-background-opacitive_menu);
+                width: 25%;
+                height: 8%;
+                border-radius: 0px 20px 20px 20px;
+                font-size: 90%;
+                padding-left: 1%;
+                padding-right: 1%;
+                margin-bottom: 10%;
+
+                /* Animação texto */
+                /* Animação texto */
+                -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation-delay: 10.0s;
+            }
+            .msg2>p{
+                text-align: center;
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            footer{
+                margin: auto;
+                width: 50%;
+                height: 20%;
+                background-color: var(--color-background-opacitive_menu);
+                border-radius: 20px 0px 20px 20px;
+
+                /* Animação texto */
+                -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation-delay: 10.5s;
+            }
+            footer>p{
+                text-align: center;
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);  
+            }
+            a{
+                text-decoration: none;
+                color: #a241fd;
+            }
+            a:hover{
+                color: red;
+            }
+    }
+        @media (min-width: 900px) { /* Geralmente Pc */
+            header{ /* Saudações */
+                background-color: var(--color-background-opacitive_menu);
+                width: 46%;
+                height: 10%;
+                border-radius: 50px;
+                font-size: 90%;
+                margin: auto;
+                margin-bottom: 20%;
+
+                /* Animação texto*/
+                -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation-delay: 0.6s;
+            }
+            header>h1{ /* Saudações */
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+                text-align: center;
+            }
+            .msg1{ 
+                background-color: var(--color-background-opacitive_menu);
+                width: 100%;
+                border-radius: 0px 20px 20px 20px;
+                font-size: 80%;
+                height: 8%;
+                padding-left: 1%;
+                padding-right: 1%;
+
+                /* Animação texto */
+                -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation-delay: 3s;
+            }
+            .msg1>p{
+                text-align: center;
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            .msg2{
+                background-color: var(--color-background-opacitive_menu);
+                width: 15%;
+                height: 8%;
+                border-radius: 0px 20px 20px 20px;
+                font-size: 90%;
+                padding-left: 1%;
+                padding-right: 1%;
+                margin-bottom: 10%;
+
+                /* Animação texto */
+                /* Animação texto */
+                -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation-delay: 10.0s;
+            }
+            .msg2>p{
+                text-align: center;
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+            }
+            footer{
+                margin: auto;
+                width: 25%;
+                height: 20%;
+                background-color: var(--color-background-opacitive_menu);
+                border-radius: 20px 0px 20px 20px;
+
+                /* Animação texto */
+                -webkit-animation: puff-in-hor 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation: puff-in-hor 0.6s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+                animation-delay: 10.5s;
+            }
+            footer>p{
+                text-align: center;
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);  
+            }
+            a{
+                text-decoration: none;
+                color: #a241fd;
+            }
+            a:hover{
+                color: red;
+            }
+    }
     </style>
 </head>
 <body>
@@ -128,7 +355,7 @@
     </header>
 
     <div class="msg1">
-        <p>Este é um site guia para exercícios e projetos pessoais, focado em ser simples e intuitivo, sendo você da área ou não. Sendo assim, agradeço sua presença, aperte os cintos e seja bem vindo, viajante!</p>
+        <p>Este é um site guia para exercícios e projetos pessoais, focado em ser simples e intuitivo, sendo você da área ou não. Sendo assim, agradeço sua presença. Aperte os cintos e seja bem vindo, viajante!</p>
     </div>
 
     <div class="msg2">
