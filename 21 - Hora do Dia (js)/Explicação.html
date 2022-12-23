@@ -43,6 +43,7 @@
         width: 16%;
         height: 6vh;
         text-align: center;
+        margin-bottom: 50px;
     }
     main{
         background-color: var(--color-background-opacitive_menu);
@@ -53,14 +54,25 @@
         width: 70%;
         height: 30%;
         text-align: center;
+        padding: 10px;
     }
-    h1, h2, hr, p{
-        color: var(--color-text-inside);
+    h1{
+        position: relative;
+        top:50%;
+        transform: translateY(-50%);
     }
     a{
         text-decoration: none;
         color: #a241fd;
         font-size: 21px;
+    }
+    a:hover{
+        color: red;
+    }
+    ol{
+        list-style-position: inside;
+        transform: translateX(-1.5%);
+        letter-spacing: 2px;
     }
     </style>
 </head>
@@ -73,7 +85,12 @@
     <main>
         <h2>Do que se trata</h2>
         <hr>
-        <p>Este será um programa que exibirá uma imagem e todo um estilo relativo a hora do dia do seu computador ou a que você inserir. <br><br> Ainda não esta pronto, então aguarde!</p>
+        <p>Este é um programa que recolhe o horário colocado (ou do seu PC) e exibe uma imagem e um estilo de página relativo a eles.</p>
+        <p>Este programa tem duas versões, então escolha:</p>
+        <ol>
+            <li><a href="">Versão automática</a></li>
+            <li><a href="manual.html">Versão manual</a></li>
+        </ol>
     </main>
     <script>
         var largura = window.screen.width;
