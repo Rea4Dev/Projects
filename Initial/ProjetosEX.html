@@ -77,7 +77,12 @@
             display: inline-block;
             width: 100vw; 
         } */
-        .proj{
+        @media (max-width: 600px) { /* Cell Gabi */
+        body{
+            font-size: 70%;
+        }
+            
+            .proj{
             /* display: inline-block;  */
             background-color: var(--color-background-opacitive_menu);
             width: 40%;
@@ -110,6 +115,96 @@
         .ultimo{
             color: rgba(255, 255, 255, 0);
         }
+        .men{
+            font-size: 9px;
+        }
+        }
+
+        @media (min-width: 600px) and (max-width: 900px) { /* Tablets */
+            body{
+            font-size: 70%;
+        }
+            
+            .proj{
+            /* display: inline-block;  */
+            background-color: var(--color-background-opacitive_menu);
+            width: 40%;
+            text-align: center;
+            opacity: 0.89;
+            margin: 30px;
+        }
+        .proj1{
+            border-radius: 0px 20px 20px 20px;
+            position: fixed;
+            top:0%;
+        }
+        .proj2{
+            border-radius: 20px 0px 20px 20px;
+            margin-left: auto;
+        }
+        .destaque{
+            color: rgb(255, 233, 246);
+        }
+        h1{
+            color: rgb(255, 233, 246);
+        }
+        a{
+            text-decoration: none;
+            color: var(--color-text-inside);
+        }
+        a:hover{
+            color: rgb(253, 137, 137);
+        }
+        .ultimo{
+            color: rgba(255, 255, 255, 0);
+        }
+        .men{
+            font-size: 10px;
+        }
+        }
+
+        @media (min-width: 900px) { /* Pcs */
+            body{
+            font-size: 100%;
+        }
+            
+            .proj{
+            /* display: inline-block;  */
+            background-color: var(--color-background-opacitive_menu);
+            width: 40%;
+            text-align: center;
+            opacity: 0.89;
+            margin: 30px;
+        }
+        .proj1{
+            border-radius: 0px 20px 20px 20px;
+            position: fixed;
+            top:0%;
+        }
+        .proj2{
+            border-radius: 20px 0px 20px 20px;
+            margin-left: auto;
+        }
+        .destaque{
+            color: rgb(255, 233, 246);
+        }
+        h1{
+            color: rgb(255, 233, 246);
+        }
+        a{
+            text-decoration: none;
+            color: var(--color-text-inside);
+        }
+        a:hover{
+            color: rgb(253, 137, 137);
+        }
+        .ultimo{
+            color: rgba(255, 255, 255, 0);
+        }
+        .men{
+            font-size: 13px;
+        }
+        }
     </style>
 </head>
 <body>
@@ -122,16 +217,16 @@
         <p class="destaque">Caso sua intenção aqui seja profissional comigo, é onde recomendo que leve mais em consideração.</p>
         <hr>
         <h2>Contextualização</h2>
-        <p>O verdadeiro campo de batalha; onde coloco tudo que sei, onde busco novos conhecimentos para o que preciso e onde aprendo com meus erros na prática. <br> <br> Tudo que estudo e pratico (em exercícios), busco aplicar em projetos atuais ou futuros. <br> <br> Meus projetos estão em <b>constante</b> evolução e atualização, e muito provavelmente estarei com mais de um em andamento.</p>
+        <p class="men">O verdadeiro campo de batalha; onde coloco tudo que sei, onde busco novos conhecimentos para o que preciso e onde aprendo com meus erros na prática. <br> <br> Tudo que estudo e pratico (em exercícios), busco aplicar em projetos atuais ou futuros. <br> <br> Meus projetos estão em <b>constante</b> evolução e atualização, e muito provavelmente estarei com mais de um em andamento.</p>
         <hr>
-        <a href="../3 - Mime and Dash Project\Initial page.html" target="_blank" rel="external">1) Mime and Dash <br> <img class="mime" src="Bonbon&Chuchu.png tratado.png" alt=""> </a>
+        <a href="../3 - Mime and Dash Project\Initial page.html" target="_blank" rel="external">1) Mime and Dash <br> <img src="Bonbon&Chuchu.png tratado2.png" alt=""></a>
     </section>
     <section class="proj proj2">
         <h1>Exercícios</h1>
         <p class="destaque">Recomendo apenas a título de curiosidade, pois devido a <b>não atualização de exercícios </b>(pois não tem porquê), torna-se um péssimo método qualificativo de minhas habilidades.</p>
         <hr>
         <h2>Contextualização</h2>
-        <p>Apenas onde pratico um ou outro novo conhecimento, ou então onde pequenos códigos como exemplo referencial de uma propriedade, juntamente aos comentários que inseri. <br><br> Por se tratar de exercícios e anotações, só os faço uma vez; quando os crio. Logo, não serve como método qualificativo.</p>
+        <p class="men">Apenas onde pratico um ou outro novo conhecimento, ou então onde pequenos códigos como exemplo referencial de uma propriedade, juntamente aos comentários que inseri. <br><br> Por se tratar de exercícios e anotações, só os faço uma vez; quando os crio. Logo, não serve como método qualificativo.</p>
         <hr>
         <h3 class="javas">Javascript</h3>
         <a onclick="verificar()"  href="../21 - Hora do Dia (js)\Explicação.html" target="_blank" rel="external">11) Hora do dia<br><br></a>
